@@ -69,14 +69,14 @@ $(function(){
 				name = $.trim(yourName.val());
 				
 				if(name.length < 1){
-					alert("Please enter a nick name longer than 1 character!");
+					alert("O apelido deve ter mais que 1 caracter!");
 					return;
 				}
 
 				email = yourEmail.val();
 
 				if(!isValid(email)) {
-					alert("Please enter a valid email!");
+					alert("Informe um e-mail válido!");
 				}
 				else {
 
@@ -100,7 +100,7 @@ $(function(){
 				name = $.trim(hisName.val());
 
 				if(name.length < 1){
-					alert("Please enter a nick name longer than 1 character!");
+					alert("O apelido deve ter mais que 1 caracter!");
 					return;
 				}
 
@@ -111,7 +111,7 @@ $(function(){
 				email = hisEmail.val();
 
 				if(!isValid(email)){
-					alert("Wrong e-mail format!");
+					alert("E-mail inválido!");
 				}
 				else {
 					socket.emit('login', {user: name, avatar: email, id: id});
